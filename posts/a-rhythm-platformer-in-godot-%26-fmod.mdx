@@ -1,0 +1,39 @@
+import MyYouTubeEmbed from '/components/myyoutubeembed/MyYouTubeEmbed'
+
+<h2 className='text-center'> A Rhythm Platformer in Godot & FMOD </h2>
+
+In August of 2022 I wanted to learn how to implement rhythm game concepts in Godot Engine, achieving something similar to the rhythm-based levels in *Rayman Legends*, where the level is designed with a piece of music
+in mind and the player's platforming has to be in time with the beat of the song.
+
+<MyYouTubeEmbed link='https://www.youtube.com/embed/rFMCX0NF4wQ?si=Gh62giEa8s6GN2qf'/>
+
+I've been toying with the idea of a rhythm-based precision platformer for a long time, and already having knowledge of the platformer-side of developing that kind of game the only thing
+left stopping me from creating this dream game of mine was figuring out the rhythm thing. I have a background in music, so I didn't expect it to be too complicated to implement -- and I 
+was right, eventually, although I definitely shot myself in the foot a few times initially before getting to something that actually worked. 
+
+If you don't care about the programming process at all, then you can just watch the video below. That's the final product I got to which I actually submitted as my final project for my music
+degree. 
+
+Otherwise, continue:
+
+I spent a few weeks working on implementing a system using Godot's built in audio players before discovering that the latency was seemingly a bit sub-par -- I wasn't able to play sounds
+*exactly* when I wanted to in order to create perfect loops and transitions between audio files, and I eventually ran into de-sync problems between the music and clock I had implemented using
+signals to keep track of the tempo and trigger events on the beat. I'm sure there's a way of making this work properly without any middleware, but after a lot of struggling I had to treat
+what I had originally coded in as a learning experience and move on to using an extension somebody has developed to integrate FMOD into the project instead. This of course came with its
+own advantages, allowing me to design all of the audio implementation in a much simpler way as well as implement any extra sound effects with ease.
+
+The challenge once I had the tempo information of whatever audio was playing accessible in engine was making sure that the player's movement corresponded with the tempo -- so that
+I could place elements in the level at specific points in the song. This is quite a basic concept in rhythm games in general, however - this being my first attempt - it did take a second
+to get my head around it all. The solution is simple enough -- the player moves at a constant speed, and the level tiles are a specific size; the solution then is to move the player one
+tile for every beat of the song, so we divide the size of the tiles by the time taken by each beat at the game's framerate. This gives us the exact speed the player should move at.
+
+I also implemented a 'shadow player', that would continually move from the beginning to the end of the level without stopping. This meant that the player could still stop moving completely,
+and upon starting again their position could 'catch up' (with a quick lerp) to the shadow player -- restoring their synchronisation with the music and thus the level as a whole. Yet again,
+a la *Rayman Legends*.
+
+All this rambling essentially boils down to the conclusion that I did in fact succeed in making something vaguely similar to those Rayman levels, learning quite a lot along the way -- even
+if the result is a little rough around the edges. I only made one level, which can be seen below.
+
+<MyYouTubeEmbed link="https://www.youtube.com/embed/8g55bo9BMUU?si=hQkI_J_NwYAY6ADL"/>
+
+One step closer to my dream rhythm platformer.

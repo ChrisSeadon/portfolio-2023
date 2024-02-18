@@ -1,0 +1,45 @@
+import Image from 'next/image'
+
+import MyYouTubeEmbed from 'components/myyoutubeembed/MyYouTubeEmbed'
+
+<h2 className='text-center'> A Rhythm Game in a Week </h2>
+
+<MyYouTubeEmbed link="https://www.youtube.com/embed/tjGbRya3xdg?si=UJXHLDwQ1cTnGeEt" />
+
+In December 2023 I took another stab at introducing rhythm concepts in a video game using Godot Engine. This time a more
+traditional, 'Guitar Hero' style gameplay style, where the 'notes' fall from the top of the screen and the player is in charge
+of pressing the corresponding button in time.
+
+In traditional games such as Guitar Hero and Rock Band, these 'notes' don't really mean anything from a musical standpoint,
+aside from abiding to the rhythm of the song -- they're not representations of real musical notes in any kind of scale and
+quite often the player will find themselves pressing the same button but hearing a different tone within the song being played.
+The player isn't actually playing an instrument, just playing along with the track.
+
+This project, 'Jingle Hero' (I couldn't think of a good name!) was my attempt at going against this established concept a little
+bit, by actually having the player's inputs play actual musical notes -- essentially they're playing a very basic keyboard, so instead
+of just 'playing along' to a song they're the ones actually in control of the melody. This is much more akin to softwares like
+Synthesia, aimed at teaching piano by providing visual feedback on the notes to be played.
+
+Naturally, this comes with some limitations -- if the player really is to have control of unique musical notes while still
+playing the game with a traditional computer keyboard or game controller, they're still only going to be able to play a handful
+of notes intuitively before you actually need to have some musical training to begin to enjoy the game. Already this means that
+the music has to be tailor made for the game, taking into account the fact that the player has only a pentatonic scale's worth
+of notes - it definitely doesn't scale to programming in popular songs very well at all, and difficulty levels would be more
+complicated than just limiting the number of notes in play a la the aforementioned games.
+
+It may sound like I'm downplaying the idea a little, but I do think there is a version of this concept that could work, provided
+that it's in a more linear and tailor made fashion, closer to older rhythm games like Gitaroo Man or PaRappa the Rapper.
+
+<Image
+    src='/gitaroo.jpg'
+    alt='Gitaroo Man'
+    width={400}
+    height={200}
+    className="object-fit justify-center mx-auto"
+/>
+
+You can see the final result above. In the final version here I carefully chose a few Christmas songs that only utilise a few
+notes in the scale (quite a challenge when it comes to Christmas songs in particular). It's a proof of concept more than anything,
+and for a week's work as part of a community charity event I was fairly happy with the result.
+
+Details about technical aspects of making this all work with Godot and FMOD  - when I get around to writing it all up - will be found on <a href="https://github.com/ChrisSeadon">my GitHub.</a>
