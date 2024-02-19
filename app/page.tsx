@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     default: "Chris Seadon"
   }
 };
-const tracks = [{title: "Liberty - Snowblind", link:"https://open.spotify.com/track/0ad5xnwRjuM0UTVqREq7iW?si=1e960485aaee451f"},{title:"Liberty - Virus", link:"https://open.spotify.com/track/0N3v29j7W871pWEBoZAp3G?si=8bbb4ca4da51498f"},{title: "Liberty - I Know Now", link:"https://open.spotify.com/track/5naLWg2rpRW4d6fLqbKIKe"},{title:"mindflayer ultrakill - Car Crash in Autumn",link:"https://soundcloud.com/user-206864475/car-crash-in-autumn"},{title:"The New Blue - Late", link:"https://open.spotify.com/track/1cWtMetNGajNAgF7VRMjht?si=396c5e0a86e5414f"},{title:"Chris Seadon - Sh••", link:"https://open.spotify.com/track/2XVuTk8SbYEe0SshK0kBGh?si=e758f98eae8e47d0"}]
+const tracks = [{title: "Liberty - Snowblind", link:"https://open.spotify.com/track/0ad5xnwRjuM0UTVqREq7iW?si=1e960485aaee451f"},{title:"Liberty - Virus", link:"https://open.spotify.com/track/0N3v29j7W871pWEBoZAp3G?si=8bbb4ca4da51498f"},{title: "Liberty - I Know Now", link:"https://open.spotify.com/track/5naLWg2rpRW4d6fLqbKIKe"},{title:"mindflayer ultrakill - Car Crash in Autumn",link:"https://soundcloud.com/user-206864475/car-crash-in-autumn"},{title:"The New Blue - Late", link:"https://open.spotify.com/track/1cWtMetNGajNAgF7VRMjht?si=396c5e0a86e5414f"},{title:"Chris Seadon - Sh--", link:"https://open.spotify.com/track/2XVuTk8SbYEe0SshK0kBGh?si=e758f98eae8e47d0"}]
 
 export default function Page() {
   return (
@@ -27,20 +27,28 @@ export default function Page() {
         <BigHeading text="Mixing Discography" link="/discography" justify="text-center xl:text-left" />
 
         <div className="flex text-white p-2 3xl:flex-wrap justify-center 4xl:scale-125 xl:mx-10 lg:py-4">
-          {tracks.map((track) => (
-            <div key={track.title} className="relative">
-              <Image
-                src={`/${track.title}.jpg`}
-                alt={track.title}
-                width={500}
-                height={500}
-                className="w-32 h-32 object-cover md:w-48 md:h-48 lg:w-64 lg:h-64 3xl:w-96 3xl:h-96"
-              />
-              <a href={track.link} className="absolute inset-0 flex items-center justify-center bg-slate-500 bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity">
-                <span className="text-base lg:text-2xl font-normal text-center uppercase mx-3">{track.title}</span>
-              </a>
-            </div>
-          ))}
+          {tracks.map((track) => {
+            
+            const slug = (track.title.replace(/ /g,'-')).toLowerCase()
+
+            return (
+
+              <div key={slug} className="relative">
+                <Image
+                  src={`/${slug}.jpg`}
+                  alt={track.title}
+                  width={500}
+                  height={500}
+                  className="w-32 h-32 object-cover md:w-48 md:h-48 lg:w-64 lg:h-64 3xl:w-96 3xl:h-96"
+                />
+                <a href={track.link} className="absolute inset-0 flex items-center justify-center bg-slate-500 bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity">
+                  <span className="text-base lg:text-2xl font-normal text-center uppercase mx-3">{track.title}</span>
+                </a>
+              </div>
+            
+            )
+
+          })}
         </div>
         
         <BigHeading text="Videography" link="/videography" justify="text-center xl:text-right" />
