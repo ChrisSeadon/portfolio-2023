@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const posts = [{title:"A Rhythm Game in a Week", date:"December 2023"},{title: "Portfolio Site Development using Next.js and Tailwind CSS", date: "August 2023/Ongoing Development"},
+const posts = [{title:"CS2 Skin Scraper in Python", date:"May 2024"},{title:"A Rhythm Game in a Week", date:"December 2023"},{title: "Portfolio Site Development using Next.js and Tailwind CSS", date: "August 2023/Ongoing Development"},
 {title:"A Rhythm Platformer in Godot and FMOD",date:"August 2022"} ,{title:"Unity 2D Game Kit - Sound Redesign",date:"December 2021"}]
 
 var i = true;
