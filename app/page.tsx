@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     default: "Chris Seadon"
   }
 };
-const tracks = [{title: "Liberty - Snowblind", link:"https://open.spotify.com/track/0ad5xnwRjuM0UTVqREq7iW?si=1e960485aaee451f"},{title:"Liberty - Virus", link:"https://open.spotify.com/track/0N3v29j7W871pWEBoZAp3G?si=8bbb4ca4da51498f"},{title: "Liberty - I Know Now", link:"https://open.spotify.com/track/5naLWg2rpRW4d6fLqbKIKe"},{title:"mindflayer ultrakill - Car Crash in Autumn",link:"https://soundcloud.com/user-206864475/car-crash-in-autumn"},{title:"The New Blue - Late", link:"https://open.spotify.com/track/1cWtMetNGajNAgF7VRMjht?si=396c5e0a86e5414f"},{title:"Chris Seadon - Sh--", link:"https://open.spotify.com/track/2XVuTk8SbYEe0SshK0kBGh?si=e758f98eae8e47d0"}]
+const tracks = [{title: "Makes Sense - No Jokes (EP)", link:"https://open.spotify.com/album/1VlRI52Iqmt23MJ0u6feKv?si=tIafxt1iSiO0qrV_9UCeBQ"},{title: "Liberty - Snowblind", link:"https://open.spotify.com/track/0ad5xnwRjuM0UTVqREq7iW?si=1e960485aaee451f"},{title:"Liberty - Virus", link:"https://open.spotify.com/track/0N3v29j7W871pWEBoZAp3G?si=8bbb4ca4da51498f"},{title: "Liberty - I Know Now", link:"https://open.spotify.com/track/5naLWg2rpRW4d6fLqbKIKe"},{title:"mindflayer ultrakill - Car Crash in Autumn",link:"https://soundcloud.com/user-206864475/car-crash-in-autumn"},{title:"The New Blue - Late", link:"https://open.spotify.com/track/1cWtMetNGajNAgF7VRMjht?si=396c5e0a86e5414f"},{title:"Chris Seadon - Sh--", link:"https://open.spotify.com/track/2XVuTk8SbYEe0SshK0kBGh?si=e758f98eae8e47d0"}]
 
 export default function Page() {
   return (
