@@ -31,7 +31,7 @@ export default function Page() {
             <a className="bg-orange-200 bg-opacity-80 dark:bg-slate-700 dark:bg-opacity-50 px-2 align-top">Highlights</a>
         </div>
 
-        <div className="flex text-white p-2 3xl:flex-wrap justify-center 4xl:scale-125 xl:mx-10 lg:py-4">
+        <div className="flex flex-wrap text-white p-2 justify-center md:mx-10 lg:py-4">
           {tracks.map((track) => {
             
             const slug = (track.title.replace(/ /g,'-')).toLowerCase()
@@ -44,7 +44,7 @@ export default function Page() {
                   alt={track.title}
                   width={300}
                   height={300}
-                  className="w-32 h-32 object-cover md:w-48 md:h-48 lg:w-64 lg:h-64 3xl:w-96 3xl:h-96"
+                  className="w-32 h-32 p-0.5 object-cover lg:w-48 lg:h-48 3xl:w-64 3xl:h-64"
                 />
                 <a href={track.link} className="absolute inset-0 flex items-center justify-center bg-slate-500 bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity">
                   <span className="text-base lg:text-2xl font-normal text-center uppercase mx-3">{track.title}</span>
