@@ -10,7 +10,7 @@ export default function Page(){
           <div className='scale-90 3xl:pt-5 3xl:mt-5'>
             <BigHeading text='Discography'/>
           </div>
-          <div className="flex-col text-white py-4 3xl:flex-wrap justify-center lg:mx-36 2xl:mx-96 lg:py-4 text-right">
+          <div className="flex-col text-white py-4 3xl:flex-wrap justify-center mx-2 lg:mx-36 2xl:mx-96 lg:py-4 text-right">
             
             {tracks.map((track) => {
 
