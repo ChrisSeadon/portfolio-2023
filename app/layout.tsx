@@ -16,9 +16,8 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body className='dark max-w-full overflow-x-clip'>
+      <body className='max-w-full overflow-x-clip'>
         <div className='bg-amber-50 text-zinc-900 dark:bg-zinc-900 dark:text-white min-h-screen'>
-          <Header />
           <main className="font-sans">{children}
           </main>
           <Footer />

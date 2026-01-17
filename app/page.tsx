@@ -9,6 +9,7 @@ import InstagramGallery from '../components/instagramgallery/InstagramGallery';
 import BigHeading from '../components/bigheading/BigHeading';
 import Posts from '../components/posts/posts'
 import { HighlightSpanKind } from 'typescript';
+import Header from 'components/header/header';
 
 export const metadata: Metadata = {
   title: {
@@ -21,6 +22,7 @@ const tracks = [{title: "Dantes Revenge - Soul Fist", link:"https://open.spotify
 export default function Page() {
   return (
     <main>
+      <Header />
 
       <div className="justify-center items-center text-center 2xl:text-left mx-auto 2xl:mx-72 3xl:mx-96 3xl:px-64 3xl:py-32 lg:px-10">
 
